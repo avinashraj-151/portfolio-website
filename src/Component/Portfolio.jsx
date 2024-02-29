@@ -24,11 +24,11 @@ const projects = [{
     date: '02-06-2024',
 },]
 function portfolio() {
-    function handelClick() {
-        console.log('Button clicked hogaya');
-    }
+    // function handelClick() {
+    //     console.log('Button clicked hogaya');
+    // }
     return (
-        <div className="lg:px-12 px-4 py-32 bg-[#E8E8E8]">
+        <div className="lg:px-12 px-4 py-32 bg-[#E8E8E8]" id='portfolio'>
             <Box class='mb-20'>
                 <div className=" text-headingcolor " >
                     <p className="text-xl font-semibold mb-5">Recent Projects</p>

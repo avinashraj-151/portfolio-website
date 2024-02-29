@@ -8,7 +8,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Home() {
     return (
-        <Box class='md:flex-row-reverse flex-col  lg:px-12 px-4 flex md:py-10 justify-between items-center gap-8 bg-[#E7DFD8]' >
+        <Box class='md:flex-row-reverse flex-col  lg:px-12 px-4 flex md:py-32 justify-between items-center gap-8 bg-[#E7DFD8]' id='home' >
             <Box class='w-full md:w-1/2'>
                 <img src={banner} alt='' className=''></img>
             </Box>

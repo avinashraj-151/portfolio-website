@@ -64,7 +64,7 @@ const skill_set = [
 ]
 function Skills() {
     return (
-        <Box class='lg:px-12 px-4 py-32 bg-[#E8E8E8]'>
+        <Box class='lg:px-12 px-4 py-32 bg-[#E8E8E8]' id='skills'>
             {/* Skills */}
             <Box class='mb-20'>
                 <h1 className='text-xl font-semibold mb-5'>My Skills</h1>

@@ -3,7 +3,7 @@ import { Fab } from '@mui/material'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 function About() {
     return (
-        <div className="lg:px-12 px-4 py-22 bg-[#E7DFD8]">
+        <div className="lg:px-12 px-4 py-22 bg-[#E7DFD8]" id='about'>
             <div className='flex items-center justify-between flex-col-reverse gap-12 md:flex-row'>
                 <div className="md:w-1/2 px-10 py-20">
                     <p className="text-xl font-semibold mb-5">About</p>

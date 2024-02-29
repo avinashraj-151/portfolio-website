@@ -4,7 +4,7 @@ import EductionCard from './EductionCard';
 
 function Education() {
     return (
-        <div className="lg:px-12 px-4 py-32">
+        <div className="lg:px-12 px-4 py-32" id='Education'>
             <div className=" text-headingcolor mb-20">
                 <p className="text-xl font-semibold mb-5" id='education'>Education</p>
                 <h2 className="md:text-5xl text-4xl font-bold">Education</h2>
