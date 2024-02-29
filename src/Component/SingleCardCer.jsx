@@ -13,6 +13,7 @@ export default function SingleCardCer({ Certification }) {
     }
     function handleClose() {
         setopen(false);
+        setFullscreen(false);
     }
     function enterFullscreen() {
         const element = document.documentElement;

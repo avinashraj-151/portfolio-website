@@ -1,4 +1,6 @@
 import about from '../assets/about_me3.png'
+import { Fab } from '@mui/material'
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 function About() {
     return (
         <div className="lg:px-12 px-4 py-22 bg-[#E7DFD8]">
@@ -45,11 +47,11 @@ function About() {
                         </li>
                     </ul> */}
                     <div className="flex gap-3 px-8 py-4 mt-5">
-                        <button className='px-6 py-2 rounded-md text-black border-[#CF2025] border-2
-                     bg-[#CF2025] hover:text-[#F7ECDE]
-                    '>
-                            Hire Me
-                        </button>
+                        <a href='https://www.linkedin.com/in/avinashraj1/' target='_blank'>
+                            <Fab color="primary" sx={{ mr: 2 }} >
+                                <LinkedInIcon />
+                            </Fab>
+                        </a>
                         <button className='px-6 py-2 rounded-md text-black border-[#CF2025] border-2
                       hover:bg-[#CF2025] hover:text-[#F7ECDE]
                     '>
