@@ -1,13 +1,20 @@
-import { TextField, CircularProgress } from "@mui/material"
+import { TextField, CircularProgress, Snackbar, Alert, AlertTitle } from "@mui/material"
 import { useState } from "react"
 import emailjs from '@emailjs/browser';
 function Form() {
     const [name, setname] = useState('')
     const [email, setemail] = useState('')
     const [Message, setmessage] = useState('')
+    const [openSnackbar, setopenSnackbar] = useState(false);
     // const [subject, setsubject] = useState('')
-    let css_button = 'px-6 py-2 rounded-md text-black border-[#CF2025] border-2  hover:bg-[#CF2025] hover:text-[#F7ECDE]'
+    let css_button = 'px-6 py-2 rounded-md  border-[#CF2025] border-2  hover:bg-[#CF2025]  hover:text-[#F7ECDE] '
     const [submitcheck, setsubmitcheck] = useState(false)
+    function handelSnackbar() {
+        setopenSnackbar(true);
+    }
+    function handlesnackClose() {
+        setopenSnackbar(false);
+    }
     function handelSubmit(e) {
         e.preventDefault()
         setsubmitcheck(true);
@@ -25,7 +32,7 @@ function Form() {
         // console.log({ name, email, Message, subject })
         emailjs.send(service_id, template_id, template_params, publicKey)
             .then((result) => {
-                // console.log(result.text)
+                setopenSnackbar(true);
                 setsubmitcheck(false);
                 setemail('')
                 setname('')
@@ -70,7 +77,7 @@ function Form() {
                 />
                 <button type="submit" className=
                     {
-                        `${css_button}${submitcheck == true ? 'bg-[#CF2025]' : 'bg-transparent'}`
+                        `${css_button}${submitcheck == true ? ' bg-[#CF2025] text-[#F7ECDE]' : 'bg-transparent text-black'}`
                     }>
                     {
                         submitcheck == true ?
@@ -85,6 +92,22 @@ function Form() {
                             : 'Send'
                     }
                 </button>
+                <Snackbar
+                    open={openSnackbar}
+                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                    autoHideDuration={1500}
+                    onClose={handlesnackClose}
+                >
+                    <Alert
+                        onClose={handlesnackClose}
+                        sx={{ width: '100%' }}
+                        severity="success"
+                        variant="filled"
+                    >
+                        <AlertTitle>Success</AlertTitle>
+                        Thanks! We'll get back to you ASAP
+                    </Alert>
+                </Snackbar>
             </form>
         </div>
     )

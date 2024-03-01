@@ -28,7 +28,7 @@ function portfolio() {
     //     console.log('Button clicked hogaya');
     // }
     return (
-        <div className="lg:px-12 px-4 py-32 bg-[#E8E8E8]" id='portfolio'>
+        <div className="lg:px-12 px-4 md:py-40 py-20 bg-[#E8E8E8]" id='portfolio'>
             <Box class='mb-20'>
                 <div className=" text-headingcolor " >
                     <p className="text-xl font-semibold mb-5">Recent Projects</p>
